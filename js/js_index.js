@@ -24,9 +24,10 @@ $(document).ready(function() { // jQuery Load
         variableHeight: true,
         slidesToShow: 5,
         slidesToScroll: 1,
+        cssEase: 'cubic-bezier(0.600, -0.280, 0.735, 0.045)',
         fade: false,
         dots: false,
-        arrows: false,
+        arrows: true,
         zIndex: 1
     }); // Review Slide - Slick
 

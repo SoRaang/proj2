@@ -215,7 +215,8 @@ aside#mnuQuick {
     display: none;
     position: fixed;
     top: 15rem;
-    left: calc(50% + 32rem);
+    right: 5%;
+    transition: .5s;
     z-index: 5000;
 }
 
@@ -310,6 +311,12 @@ div.btnOpen > span:last-of-type {
 
 .spinOn {
     transform: rotate(405deg);
+}
+
+@media screen and (max-width: 1280px) {
+    aside#mnuQuick {
+        right: calc(0% - 6rem);
+    }
 }
 
 /* ---------- 퀵메뉴 끝 ---------- */

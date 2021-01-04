@@ -71,17 +71,20 @@ section#slideMain {
     background: #000;
 }
 
-section#slideMain > article {
-    height: 100%;
-}
-
 div.slide_container {
     height: 100%;
     background: #000;
 }
 
+section#slideMain > article {
+    height: 100%;
+}
+
+.slick-list {
+    height: 100%;
+}
+
 .slick-slide {
-    position: relative;
     padding-top: 13.25rem;
     height: 41rem;
     box-sizing: border-box;

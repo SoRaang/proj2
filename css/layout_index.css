@@ -80,7 +80,7 @@ section#slideMain > article {
     height: 100%;
 }
 
-.slick-slide {
+section#slideMain .slick-slide {
     padding-top: 13.25rem;
     height: 41rem;
     box-sizing: border-box;
@@ -88,7 +88,7 @@ section#slideMain > article {
     text-shadow: 0 0 .5rem rgba(0, 0, 0, 1);
 }
 
-.slick-slide p {
+section#slideMain .slick-slide p {
     margin: 0 auto;
     width: fit-content;
     font-size: 1rem;
@@ -96,37 +96,37 @@ section#slideMain > article {
     line-height: 1;
 }
 
-.slick-slide p.slide_title {
+section#slideMain .slick-slide p.slide_title {
     margin: .5rem auto;
     font-size: 2rem;
 }
 
-article.slide_itm01 {
+section#slideMain article.slide_itm01 {
     background: url('../images/main_banner01.jpg') no-repeat center;
     background-size: cover;
 }
 
-article.slide_itm02 {
+section#slideMain article.slide_itm02 {
     background: url('../images/main_banner02.jpg') no-repeat center;
     background-size: cover;
 }
 
-article.slide_itm03 {
+section#slideMain article.slide_itm03 {
     background: url('../images/main_banner03.jpg') no-repeat center;
     background-size: cover;
 }
 
-article.slide_itm04 {
+section#slideMain article.slide_itm04 {
     background: url('../images/main_banner04.jpg') no-repeat center;
     background-size: cover;
 }
 
-article.slide_itm05 {
+section#slideMain article.slide_itm05 {
     background: url('../images/main_banner05.jpg') no-repeat center;
     background-size: cover;
 }
 
-button.slide_more {
+section#slideMain button.slide_more {
     display: block;
     margin: 8rem auto 0 auto;
     padding: .75rem 1.5rem;
@@ -141,12 +141,12 @@ button.slide_more {
     cursor: pointer;
 }
 
-button.slide_more:hover {
+section#slideMain button.slide_more:hover {
     background: #fff;
     color: #2d2d2d;
 }
 
-.slick-dots {
+section#slideMain .slick-dots {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -156,7 +156,7 @@ button.slide_more:hover {
     left: calc(50% - 24rem);
 }
 
-.slick-dots li {
+section#slideMain .slick-dots li {
     margin: auto .4rem;
     width: .8rem;
     height: .8rem;
@@ -170,7 +170,7 @@ button.slide_more:hover {
     cursor: pointer;
 }
 
-.slick-dots li.slick-active {
+section#slideMain .slick-dots li.slick-active {
     margin: auto .25rem;
     width: 3rem;
     border: .25rem solid cyan;
@@ -339,7 +339,247 @@ section#secEvent {
 /* ---------- (5) 포토리뷰 시작 ---------- */
 
 section#secReview {
+    position: relative;
     padding: 5rem 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+section#secReview::before,
+section#secReview::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    z-index: 100;
+    content: '';
+}
+
+section#secReview::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(233, 244, 255, 1) 5%, rgba(233, 244, 255, 0) 100%);
+}
+
+section#secReview::after {
+    right: 0;
+    background: linear-gradient(-90deg, rgba(233, 244, 255, 1) 5%, rgba(233, 244, 255, 0) 100%);
+}
+
+section#secReview > div.review_container {
+    width: 100%;
+    height: 30rem;
+}
+
+section#secReview article {
+    position: relative;
+    margin: 2rem .5rem;
+    width: 18.2rem !important;
+    height: 26rem;
+    opacity: .75;
+    transition: .3s;
+    z-index: 1;
+}
+
+section#secReview article > div.rev_content {
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 20rem;
+    background: #fff;
+}
+
+div.slick-list {
+    height: 35rem;
+}
+
+section#secReview article > div.rev_content > img {
+    display: block;
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+section#secReview article > div.rev_content > span.rev_pict {
+    display: block;
+    position: absolute;
+    top: 8.5rem;
+    left: 1rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: #ccc;
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, .1);
+    z-index: 3;
+}
+
+section#secReview article > div.rev_content > dl > dt {
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    top: 11rem;
+    left: 7rem;
+    width: 10.2rem;
+}
+
+section#secReview article > div.rev_content > dl > dt > p {
+    width: 100%;
+    height: 1.5rem;
+    font-size: 1rem;
+    color: #2d2d2d;
+    line-height: 1.5rem;
+}
+
+section#secReview article > div.rev_content > dl > dt > span {
+    display: block;
+    width: 50%;
+    height: 1rem;
+    font-size: .7rem;
+    color: #808080;
+    line-height: 1rem;
+}
+
+span.rev_date {
+    text-align: right;
+}
+
+section#secReview article > div.rev_content > dl > dd {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1rem;
+    width: 16.2rem;
+    height: 4rem;
+    font-size: .7rem;
+    color: #808080;
+    line-height: 1rem;
+}
+
+section#secReview article > div.rev_content > span.rev_starpoint {
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: calc(100% - 2rem);
+}
+
+section#secReview article > div.rev_prod {
+    position: relative;
+    padding: .5rem;
+    width: 100%;
+    height: 5rem;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+section#secReview article > div.rev_prod > img {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: .05rem solid #ccc;
+    box-sizing: border-box;
+    background: #fff;
+    object-fit: contain;
+}
+
+section#secReview article > div.rev_prod > p {
+    position: absolute;
+    left: 1rem;
+    width: 11.2rem;
+}
+
+section#secReview article > div.rev_prod > p.rev_prodname {
+    top: 1rem;
+    height: 1rem;
+    font-size: .8rem;
+    line-height: 1rem;
+}
+
+section#secReview article > div.rev_prod > hr {
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    left: 1rem;
+    width: 17.7rem;
+    height: .05rem;
+    background: #ccc;
+}
+
+section#secReview article > div.rev_prod > p.rev_prodspec {
+    bottom: 1rem;
+    height: 2rem;
+    font-size: .7rem;
+    line-height: 1rem;
+}
+
+section#secReview article.slick-center {
+    margin: 0 -1.8rem;
+    width: 25.2rem !important;
+    height: 30rem;
+    opacity: 1;
+    z-index: 2;
+}
+
+section#secReview article.slick-center > div.rev_content {
+    width: 100%;
+    height: 23rem;
+    box-shadow: 0 .5rem 2.5rem rgba(162, 187, 214, .4);
+}
+
+section#secReview article.slick-center > div.rev_content > img {
+    height: 11.5rem;
+}
+
+section#secReview article.slick-center > div.rev_content > span.rev_pict {
+    top: 10rem;
+}
+
+section#secReview article.slick-center > div.rev_content > dl > dt {
+    top: 12.5rem;
+    width: 17.2rem;
+}
+
+section#secReview article.slick-center > div.rev_content > dl > dt > p {
+    font-size: 1.2rem;
+}
+
+section#secReview article.slick-center > div.rev_content > dl > dd {
+    bottom: 3rem;
+    width: 23.2rem;
+}
+
+section#secReview article.slick-center > div.rev_content > span.rev_starpoint {
+    display: flex;
+}
+
+section#secReview article.slick-center > div.rev_prod {
+    height: 6rem;
+    box-shadow: 0 .5rem 2.5rem rgba(162, 187, 214, .4);
+}
+
+section#secReview article.slick-center > div.rev_prod > img {
+    top: 1rem;
+    right: 1rem;
+}
+
+section#secReview article.slick-center > div.rev_prod > p {
+    width: 17.7rem;
+}
+
+section#secReview article.slick-center > div.rev_prod > p.rev_prodname {
+    font-size: 1rem;
+}
+
+section#secReview article.slick-center > div.rev_prod > hr {
+    display: initial;
+}
+
+section#secReview article.slick-center > div.rev_prod > p.rev_prodspec {
+    font-size: .9rem;
 }
 
 /* ---------- (6) 스토어 베스트 시작 ---------- */

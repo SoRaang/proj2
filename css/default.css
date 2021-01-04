@@ -535,17 +535,17 @@ div#navIcon > span {
 }
 
 div#navIcon > span:first-of-type {
-    background: url('../images/icon_temp.svg') no-repeat center;
+    background: url('../images/icoSearch.svg') no-repeat center;
     background-size: contain;
 }
 
 div#navIcon > span:nth-of-type(2) {
-    background: url('../images/icon_temp2.svg') no-repeat center;
+    background: url('../images/icoAccount.svg') no-repeat center;
     background-size: contain;
 }
 
 div#navIcon > span:last-of-type {
-    background: url('../images/icon_temp3.svg') no-repeat center;
+    background: url('../images/icoLanguage.svg') no-repeat center;
     background-size: contain;
 }
 

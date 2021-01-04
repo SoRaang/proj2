@@ -5,11 +5,30 @@ $(document).ready(function() { // jQuery Load
         lazyLoad: 'ondemand',
         infinite: true,
         autoplay: true,
+        autoplaySpeed: 5000,
         fade: false,
         dots: true,
         arrows: false,
         zIndex: 1
     }); // Main Slide - Slick
+
+    $('.rev-slider').slick({
+        lazyLoad: 'ondemand',
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: false,
+        centerMode: true,
+        centerPadding: '0',
+        variableWidth: true,
+        variableHeight: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        fade: false,
+        dots: false,
+        arrows: false,
+        zIndex: 1
+    }); // Review Slide - Slick
 
     var newsticker = setInterval(function() {
         $('ul.listNotice > li:first-child').animate({'marginTop': '-1.75rem'}, function() {

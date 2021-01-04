@@ -76,8 +76,9 @@ section#slideMain > div.int_wrap {
 }
 
 div.slide_container {
-    height: 100%;
+    height: 41rem;
     background: #000;
+    overflow: hidden;
 }
 
 .slick-slide {

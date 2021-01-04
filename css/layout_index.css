@@ -80,10 +80,6 @@ section#slideMain > article {
     height: 100%;
 }
 
-.slick-track {
-    height: 41rem;
-}
-
 .slick-slide {
     padding-top: 13.25rem;
     height: 41rem;

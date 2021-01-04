@@ -71,7 +71,7 @@ section#slideMain {
     background: #000;
 }
 
-section#slideMain div.int_wrap {
+section#slideMain > article {
     height: 100%;
 }
 

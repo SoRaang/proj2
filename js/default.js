@@ -12,7 +12,7 @@ $(document).ready(function() { // jQuery Load
     }); // Header Scroll
 
     $(window).scroll(function() {
-        if ($(window).scrollTop() >= 500) {
+        if ($(window).scrollTop() >= 100) {
             $('aside#mnuQuick').fadeIn(300);
         } else {
             $('aside#mnuQuick').fadeOut(100);
@@ -23,15 +23,15 @@ $(document).ready(function() { // jQuery Load
 
     $('.btnOpen').click(function() {
         if (q_condition == 1) {
-            $('.btn1').stop().animate({'top': '3.5rem'}, 200);
-            $('.btn2').stop().animate({'top': '7rem'}, 200);
-            $('.btn3').stop().animate({'top': '10.5rem'}, 200);
+            $('.btn3').stop().animate({'bottom': '3.5rem'}, 200);
+            $('.btn2').stop().animate({'bottom': '7rem'}, 200);
+            $('.btn1').stop().animate({'bottom': '10.5rem'}, 200);
             $(this).siblings('div').addClass('quickOn');
             $(this).addClass('openOn');
             $(this).find('span').addClass('spinOn');
             q_condition = 2;
         } else {
-            $(this).siblings('div').stop().animate({'top': '0'}, 300);
+            $(this).siblings('div').stop().animate({'bottom': '0'}, 300);
             $(this).siblings('div').removeClass('quickOn');
             $(this).removeClass('openOn');
             $(this).find('span').removeClass('spinOn');
@@ -52,9 +52,16 @@ $(document).ready(function() { // jQuery Load
         });
     }); // Submenu Banner Attach
 
+    $('div#navIcon > span').each(function() {
+        $(this).click(function() {
+            $(this).children('div').fadeToggle(250);
+            $(this).siblings().children('div').fadeOut(100);
+        });
+    }); // Nav Icons Sub Window Function
+
     $('ul.dropdown_pane').appendTo('p.dropdown'); // Dropdown Menu Attach
 
-    var d_condition = 1
+    var d_condition = 1;
 
     $('p.dropdown').click(function() {
         if (d_condition == 1) {

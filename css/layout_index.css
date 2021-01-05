@@ -916,7 +916,8 @@ form#frmSearch > button {
     margin-left: auto;
     width: 4rem;
     height: 2rem;
-    background: #ccc;
+    background: #e3e3e3;
+    cursor: pointer;
 }
 
 section#secCategory > div.int_wrap {

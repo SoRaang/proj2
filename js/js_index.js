@@ -42,4 +42,13 @@ $(document).ready(function() { // jQuery Load
             $(this).css({'marginTop': '0'});
         });
     }, 5000); // Line Scrolling Function
+
+    $('section#secCategory article').each(function() {
+        $(this).hover(function() {
+            $(this).siblings().removeClass('checked');
+            $(this).addClass('checked');
+        }, function() {
+            $(this).removeClass('checked');
+        });
+    }); // Category Item Hovering
 }) // jQuery Closed

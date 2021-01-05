@@ -866,29 +866,104 @@ section#secCategory {
     padding: 5rem 0;
 }
 
+form#frmSearch {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 0 auto;
+    padding: .5rem;
+    width: 50rem;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 .5rem 2.5rem rgba(162, 187, 214, .4);
+}
+
+form#frmSearch > * {
+    display: block;
+    outline: none;
+}
+
+form#frmSearch > select {
+    margin: auto 0 auto .5rem;
+    width: 8rem;
+    height: 1rem;
+    font-size: .8rem;
+    line-height: 1rem;
+}
+
+form#frmSearch > hr {
+    margin: 0 1rem;
+    width: .05rem;
+    height: 2rem;
+    background: #ccc;
+}
+
+form#frmSearch > input {
+    margin: auto 0;
+    width: 33.5rem;
+    height: 1rem;
+}
+
+form#frmSearch > button {
+    margin-left: auto;
+    width: 4rem;
+    height: 2rem;
+    background: #ccc;
+}
+
 /* ---------- (8) 사이트맵 시작 ---------- */
 
 section#secSitemap {
     padding: 2.5rem 0;
     background: #fff;
     box-shadow: 0 0 2.5rem rgba(162, 187, 214, .4);
+    font-size: .8rem;
+}
+
+section#secSitemap a {
+    padding: .3rem .5rem;
+    border-radius: .1rem;
+    transition: .2s;
+}
+
+section#secSitemap a:hover {
+    background: rgba(129, 171, 255, 1);
+    box-shadow: 0 .25rem .5rem rgba(162, 187, 214, .4);
+    color: #fff;
 }
 
 section#secSitemap > div.int_wrap {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-content: flex-start;
 }
 
 h2.sitemapTitle {
-    margin: 0 auto 1.5rem auto;
-    width: fit-content;
+    margin-bottom: 1rem;
+    padding-bottom: .4rem;
+    width: 100%;
+    border-bottom: .05rem solid #ccc;
     font-size: 1.2rem;
+    text-align: center;
     line-height: 1;
+}
+
+section#secSitemap ul {
+    width: 20%;
+    text-align: center;
+}
+
+section#secSitemap ul > li {
+    margin: .6rem 0;
 }
 
 section#secSitemap ul::before {
     display: block;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #666;
     content: attr(list-header);
 }

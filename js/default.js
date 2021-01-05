@@ -1,4 +1,4 @@
-// ---------- CWK Default jQuary Ver. 20201230 ----------
+// ---------- CWK Default jQuary Ver. 202101 ----------
 
 $(document).ready(function() { // jQuery Load
     $(window).scroll(function() {

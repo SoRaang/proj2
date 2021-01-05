@@ -1,4 +1,4 @@
-/* ---------- CWK Individual Layout CSS Ver. 20201230 ---------- */
+/* ---------- CWK Individual Layout CSS Ver. 202101 ---------- */
 
 /* 공통 선언 시작 */
 
@@ -336,6 +336,56 @@ section#secEvent {
     padding: 5rem 0;
 }
 
+section#secEvent > div.int_wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@keyframes onposition {
+    0% {
+        transform: translateY(3rem);
+        opacity: .3;
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+section#secEvent article {
+    width: 24.5rem;
+    height: 24.5rem;
+    box-shadow: 0 .5rem 2.5rem rgba(162, 187, 214, .4);
+    overflow: hidden;
+    animation: onposition 1s;
+}
+
+section#secEvent article > a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+article.event_sq1 {
+    background: darkslateblue;
+}
+
+article.event_sq2 {
+    background: tomato;
+}
+
+article.event_sq3 {
+    background: aquamarine;
+}
+
+article.event_sq4 {
+    background: blanchedalmond;
+}
+
 /* ---------- (5) 포토리뷰 시작 ---------- */
 
 section#secReview {
@@ -394,7 +444,6 @@ section#secReview div.slick-list {
 }
 
 section#secReview article > div.rev_content > img {
-    display: block;
     width: 100%;
     height: 10rem;
     object-fit: cover;
@@ -472,18 +521,22 @@ section#secReview article > div.rev_content > span.rev_starpoint {
 
 section#secReview article > div.rev_prod {
     position: relative;
-    padding: .5rem;
     width: 100%;
     height: 5rem;
-    box-sizing: border-box;
     background: #fff;
+    transition: .3s;
 }
 
-section#secReview article > div.rev_prod > img {
+section#secReview article > div.rev_prod > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section#secReview article > div.rev_prod img {
     position: absolute;
     top: .5rem;
     right: .5rem;
-    display: block;
     width: 4rem;
     height: 4rem;
     border: .05rem solid #ccc;
@@ -492,20 +545,20 @@ section#secReview article > div.rev_prod > img {
     object-fit: contain;
 }
 
-section#secReview article > div.rev_prod > p {
+section#secReview article > div.rev_prod p {
     position: absolute;
     left: 1rem;
     width: 11.2rem;
 }
 
-section#secReview article > div.rev_prod > p.rev_prodname {
+section#secReview article > div.rev_prod p.rev_prodname {
     top: 1rem;
     height: 1rem;
     font-size: .8rem;
     line-height: 1rem;
 }
 
-section#secReview article > div.rev_prod > hr {
+section#secReview article > div.rev_prod hr {
     display: none;
     position: absolute;
     top: 2.5rem;
@@ -515,7 +568,7 @@ section#secReview article > div.rev_prod > hr {
     background: #ccc;
 }
 
-section#secReview article > div.rev_prod > p.rev_prodspec {
+section#secReview article > div.rev_prod p.rev_prodspec {
     bottom: 1rem;
     height: 2rem;
     font-size: .7rem;
@@ -567,24 +620,29 @@ section#secReview article.slick-center > div.rev_prod {
     box-shadow: 0 .5rem 2.5rem rgba(162, 187, 214, .4);
 }
 
-section#secReview article.slick-center > div.rev_prod > img {
+section#secReview article.slick-center > div.rev_prod:hover {
+    box-shadow: 0 .5rem 4rem rgba(162, 187, 214, 1);
+    transform: scale(1.05);
+}
+
+section#secReview article.slick-center > div.rev_prod img {
     top: 1rem;
     right: 1rem;
 }
 
-section#secReview article.slick-center > div.rev_prod > p {
+section#secReview article.slick-center > div.rev_prod p {
     width: 17.7rem;
 }
 
-section#secReview article.slick-center > div.rev_prod > p.rev_prodname {
+section#secReview article.slick-center > div.rev_prod p.rev_prodname {
     font-size: 1rem;
 }
 
-section#secReview article.slick-center > div.rev_prod > hr {
+section#secReview article.slick-center > div.rev_prod hr {
     display: initial;
 }
 
-section#secReview article.slick-center > div.rev_prod > p.rev_prodspec {
+section#secReview article.slick-center > div.rev_prod p.rev_prodspec {
     font-size: .9rem;
 }
 
@@ -631,7 +689,6 @@ section#secReview .slick-arrow {
 }
 
 section#secReview .slick-arrow:hover {
-    filter: drop-shadow(0 0 1rem rgba(0, 90, 255, 1));
     transform: scale(1.3);
 }
 
@@ -667,11 +724,74 @@ section#secBest > div.int_wrap {
 }
 
 section#secBest > div.int_wrap > div {
-    position: relative;
     background: #ccc;
     box-shadow: 0 .5rem 2.5rem rgba(162, 187, 214, .4);
     overflow: hidden;
     z-index: 1;
+}
+
+section#secBest > div.int_wrap > div > a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+div.grid_overlay {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(.5rem);
+    color: #fff;
+    text-align: center;
+    transition: .4s;
+}
+
+div.grid_overlay > hr {
+    margin: .8rem 0;
+    width: 20%;
+    height: .05rem;
+    background: #fff;
+}
+
+div.grid_overlay > p.txtlight {
+    font-size: .7rem;
+    line-height: 1rem;
+}
+
+div.one {
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+}
+
+div.two {
+    right: -100%;
+    width: 50%;
+    height: 100%;
+}
+
+div.four {
+    bottom: -100%;
+    width: 100%;
+    height: 50%;
+}
+
+section#secBest > div.int_wrap > div:hover div.one {
+    bottom: 0;
+}
+
+section#secBest > div.int_wrap > div:hover div.two {
+    right: 0;
+}
+
+section#secBest > div.int_wrap > div:hover div.four {
+    bottom: 0;
 }
 
 section#secBest > div.int_wrap > div.grid_01 {
@@ -752,4 +872,23 @@ section#secSitemap {
     padding: 2.5rem 0;
     background: #fff;
     box-shadow: 0 0 2.5rem rgba(162, 187, 214, .4);
+}
+
+section#secSitemap > div.int_wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+h2.sitemapTitle {
+    margin: 0 auto 1.5rem auto;
+    width: fit-content;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+section#secSitemap ul::before {
+    display: block;
+    content: attr(list-header);
 }

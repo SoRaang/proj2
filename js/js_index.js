@@ -1,4 +1,4 @@
-// ---------- CWK Individual jQuary Ver. 20201230 ----------
+// ---------- CWK Individual jQuary Ver. 2020101 ----------
 
 $(document).ready(function() { // jQuery Load
     $('.main-slick').slick({
@@ -6,7 +6,7 @@ $(document).ready(function() { // jQuery Load
         infinite: true,
         autoplay: true,
         autoplaySpeed: 5000,
-        fade: false,
+        fade: true,
         dots: true,
         arrows: false,
         zIndex: 1

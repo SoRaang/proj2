@@ -1,4 +1,4 @@
-/* ---------- CWK Default CSS Ver. 20201230 ---------- */
+/* ---------- CWK Default CSS Ver. 202101 ---------- */
 
 @font-face {
     font-family: 'NanumSquare AC Light';
@@ -50,6 +50,7 @@ table {
 }
 
 img {
+    display: block;
     border: none;
 }
 
@@ -589,7 +590,6 @@ div.mnuDepth2_banner > dl:first-of-type {
 }
 
 div.mnuDepth2_banner > dl > a > img {
-    display: block;
     width: 100%;
     height: 6.5rem;
     border: .05rem solid #707070;
@@ -621,6 +621,13 @@ footer#footIndex {
     font-size: .6rem;
     line-height: .75rem;
     color: #808080;
+}
+
+footer#footIndex a:hover,
+footer#footIndex a:active {
+    color: #38f2ff;
+    text-decoration: underline solid;
+    transition: .2s;
 }
 
 footer#footIndex h1.logo_bw {
@@ -722,7 +729,6 @@ ul.dropdown_pane > li:hover {
 }
 
 div.footHead > div.int_wrap img {
-    display: block;
     width: 100%;
 }
 

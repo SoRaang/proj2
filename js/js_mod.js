@@ -1,4 +1,4 @@
-// ---------- CWK MOD jQuary Ver. 20201230 ----------
+// ---------- CWK MOD jQuary Ver. 202101 ----------
 
 $(document).ready(function() { // jQuery Load
 

@@ -11,14 +11,6 @@ $(document).ready(function() { // jQuery Load
         }
     }); // Header Scroll
 
-    $(window).scroll(function() {
-        if ($(window).scrollTop() >= 100) {
-            $('aside#mnuQuick').fadeIn(300);
-        } else {
-            $('aside#mnuQuick').fadeOut(100);
-        }
-    }); // Quick Menu Scroll
-
     var q_condition = 1;
 
     $('.btnOpen').click(function() {
@@ -65,7 +57,7 @@ $(document).ready(function() { // jQuery Load
 
     $('p.q_close').click(function () {
         $(this).parent('div').fadeOut(150);
-    });
+    }); // Nav Icons Sub Window Closing Function
 
     $('ul.dropdown_pane').appendTo('p.dropdown'); // Dropdown Menu Attach
 

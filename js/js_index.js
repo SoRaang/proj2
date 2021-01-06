@@ -1,6 +1,14 @@
 // ---------- CWK Individual jQuary Ver. 2020101 ----------
 
 $(document).ready(function() { // jQuery Load
+    $(window).scroll(function() {
+        if ($(window).scrollTop() >= 100) {
+            $('aside#mnuQuick').fadeIn(300);
+        } else {
+            $('aside#mnuQuick').fadeOut(100);
+        }
+    }); // Quick Menu Scroll
+
     $('.main-slick').slick({
         lazyLoad: 'ondemand',
         infinite: true,

@@ -60,7 +60,34 @@ aside#copyright_info {
     background: none;
 }
 
+aside#mnuQuick {
+    display: flex;
+}
+
 /* 우선/예외 선언 종료 */
 
-/* ---------- (1) 컨텐츠 영역 시작 ---------- */
+/* ---------- (1) 서브메뉴 시작 ---------- */
 
+div#wrap > div.int_wrap::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+nav#mnuSide {
+    float: left;
+    margin: 1rem 0;
+    padding: .5rem;
+    width: 20%;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+section#subContents {
+    float: right;
+    padding: 2.5rem .5rem;
+    width: 78%;
+    height: 100%;
+    box-sizing: border-box;
+    background: #fff;
+}

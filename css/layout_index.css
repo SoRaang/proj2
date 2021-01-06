@@ -59,7 +59,9 @@ p.secSubtitle {
 /* 공통 선언 종료 */
 /* 우선/예외 선언 시작 */
 
-
+aside#mnuQuick {
+    display: none;
+}
 
 /* 우선/예외 선언 종료 */
 

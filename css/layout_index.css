@@ -285,6 +285,7 @@ section#secShortcut > div.int_wrap {
 }
 
 section#secShortcut article {
+    position: relative;
     margin: 0 .5rem;
     width: 11.75rem;
     height: 14rem;
@@ -302,10 +303,12 @@ section#secShortcut article a {
 }
 
 span.scIcon {
+    position: relative;
     display: block;
     margin: 0 auto;
     width: 6.25rem;
     height: 6.25rem;
+    z-index: 2;
 }
 
 section#secShortcut article:first-child span.scIcon {
@@ -326,6 +329,47 @@ section#secShortcut article:nth-child(3) span.scIcon {
 section#secShortcut article:last-child span.scIcon {
     background: url('../images/icon_support.svg') no-repeat center;
     background-size: cover;
+}
+
+section#secShortcut article:hover span.scIcon {
+    filter: invert(1) contrast(200%);
+}
+
+section#secShortcut article::before,
+section#secShortcut article::after {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s;
+    z-index: 1;
+    content: '';
+}
+
+section#secShortcut article::before {
+    top: 0;
+    left: calc(50% - 3.5rem);
+    width: 7rem;
+    height: 7rem;
+    background: #81abff;
+}
+
+section#secShortcut article::after {
+    top: 3rem;
+    right: 2.3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #ffc756;
+}
+
+section#secShortcut article:hover::before {
+    top: 1.4rem;
+    opacity: 1;
+}
+
+section#secShortcut article:hover::after {
+    top: 1rem;
+    opacity: 1;
 }
 
 h3.scTitle {

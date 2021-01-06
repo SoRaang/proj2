@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <!-- 최소/최대 스케일 1x, 확대/축소 불가 -->
 
-        <title>가성비가 뛰어난 TV, 이노스</title>
+        <title>김창완 - 이노스 TV 포트폴리오 (인덱스)</title>
 
         <link rel="stylesheet" type="text/css" href="./css/normalize.css" /> <!-- 브라우저별 태그 형태 통일 -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> <!-- Slick Carousel -->
@@ -28,18 +28,18 @@
     <body> <!-- CWK Normal HTML Ver. 202101 -->
         <div id="wrap">
             <!-- Non-Related -->
-            <aside id="copyright_info" class="txtnorm">
+            <aside id="copyright_info" class="index txtnorm">
                 <p>현재 보고 계시는 웹 페이지는 2021년 프론트엔드 디자인 교육과정을 이수한 포트폴리오 저작물로서 불법 복제는 불가하며, 사용된 이미지는 무료 이미지 및 해당 업체의 이미지 등을 편집하여 사용하였으므로 저작권은 해당 업체 및 이미지의 원 저작자에게 있음을 알려드립니다. 문제의 소지가 있을 시에는 <a class="txtbold" href="mailto:dsc0320@hotmail.com">dsc0320@hotmail.com</a> 으로 연락 주시기 바랍니다.</p>
             </aside>
             <aside id="mnuQuick">
                 <div class="btn1" tt-data="A/S 신청 전 확인사항">
-                    <img src="https://picsum.photos/seed/rand1/100/100" />
+                    <img src="./images/icon_construct.svg" />
                 </div>
                 <div class="btn2" tt-data="다운로드 센터">
-                    <img src="https://picsum.photos/seed/rand2/100/100" />
+                    <img src="./images/icon_download.svg" />
                 </div>
                 <div class="btn3" tt-data="고객센터 : 1544 - 6799">
-                    <img src="https://picsum.photos/seed/rand3/100/100" />
+                    <img src="./images/icon_support.svg" />
                 </div>
                 <div class="btnOpen" tt-data="퀵메뉴 열기 / 닫기">
                     <span></span>
@@ -60,7 +60,7 @@
                                     <div class="int_wrap">
                                         <h2 class="txtblack">회사소개</h2>
                                         <ul class="mnuDepth2">
-                                            <li><a href="#">브랜드 소개</a></li>
+                                            <li class="clickthis"><a href="./sub1_1.html">브랜드 소개</a></li>
                                             <li><a href="#">회사 연혁</a></li>
                                             <li><a href="#">오시는 길</a></li>
                                             <li><a href="#">관련기사</a></li>
@@ -141,19 +141,43 @@
                         </dl>
                     </div>
                     <div id="navIcon">
-                        <span title="제품명 검색">
+                        <span title="제품 검색">
                             <div>
-                                제품명 검색 어쩌고
+                                <form id="frmQsearch">
+                                    <label for="txtQsearch">제품 검색</label>
+                                    <input type="text" id="txtQsearch" name="txtQsearch" placeholder="제품명 또는 키워드를 입력하세요" />
+                                    <button type="submit">검색</button>
+                                </form>
+                                <p class="q_close" title="닫기">
+                                    <span></span>
+                                    <span></span>
+                                </p>
                             </div>
                         </span>
                         <span title="회원정보">
                             <div>
-                                회원가입 / 로그인
+                                <p class="q_title">회원가입 / 로그인</p>
+                                어쩌고 저쩌고 이런저런 폼이 있고 궁시렁 방시렁
+                                <p class="q_close">
+                                    <span></span>
+                                    <span></span>
+                                </p>
                             </div>
                         </span>
                         <span title="언어 선택">
                             <div>
-                                온세상 어린이들 다 만나고 오겠네
+                                <p class="q_title">현재 언어 : 한국어</p>
+                                <ul>
+                                    <li>한국어</li>
+                                    <li>English</li>
+                                    <li>中國語</li>
+                                    <li>日本語</li>
+                                    <li>Ру́сский</li>
+                                </ul>
+                                <p class="q_close">
+                                    <span></span>
+                                    <span></span>
+                                </p>
                             </div>
                         </span>
                     </div>
@@ -655,7 +679,7 @@
                 </form>
                 <div class="int_wrap">
                     <article>
-                        <img src="https://picsum.photos/seed/rand4/500/500" alt="제품사진" />
+                        <img src="./images/product_big.jpg" alt="제품사진" />
                         <dl>
                             <dt class="txtbold">
                                 SuperDuperAwesomeTV
@@ -669,7 +693,7 @@
                         <button class="btn_shop scr_alt" title="스토어에서 바로 구매하기">바로가기</button>
                     </article>
                     <article>
-                        <img src="https://picsum.photos/seed/rand5/500/500" alt="제품사진" />
+                        <img src="./images/product_big.jpg" alt="제품사진" />
                         <dl>
                             <dt class="txtbold">
                                 SuperDuperAwesomeTV
@@ -683,7 +707,7 @@
                         <button class="btn_shop scr_alt" title="스토어에서 바로 구매하기">바로가기</button>
                     </article>
                     <article>
-                        <img src="https://picsum.photos/seed/rand6/500/500" alt="제품사진" />
+                        <img src="./images/product_big.jpg" alt="제품사진" />
                         <dl>
                             <dt class="txtbold">
                                 SuperDuperAwesomeTV
@@ -697,7 +721,7 @@
                         <button class="btn_shop scr_alt" title="스토어에서 바로 구매하기">바로가기</button>
                     </article>
                     <article>
-                        <img src="https://picsum.photos/seed/rand7/500/500" alt="제품사진" />
+                        <img src="./images/product_small.jpg" alt="제품사진" />
                         <dl>
                             <dt class="txtbold">
                                 SuperDuperAwesomeTV
@@ -711,7 +735,7 @@
                         <button class="btn_shop scr_alt" title="스토어에서 바로 구매하기">바로가기</button>
                     </article>
                     <article>
-                        <img src="https://picsum.photos/seed/rand8/500/500" alt="제품사진" />
+                        <img src="./images/product_small.jpg" alt="제품사진" />
                         <dl>
                             <dt class="txtbold">
                                 SuperDuperAwesomeTV
@@ -725,7 +749,7 @@
                         <button class="btn_shop scr_alt" title="스토어에서 바로 구매하기">바로가기</button>
                     </article>
                     <article>
-                        <img src="https://picsum.photos/seed/whythisone/500/500" alt="제품사진" />
+                        <img src="./images/product_small.jpg" alt="제품사진" />
                         <dl>
                             <dt class="txtbold">
                                 SuperDuperAwesomeTV
@@ -739,7 +763,7 @@
                         <button class="btn_shop scr_alt" title="스토어에서 바로 구매하기">바로가기</button>
                     </article>
                     <article>
-                        <img src="https://picsum.photos/seed/rand10/500/500" alt="제품사진" />
+                        <img src="./images/product_mobile.jpg" alt="제품사진" />
                         <dl>
                             <dt class="txtbold">
                                 SuperDuperAwesomeTV

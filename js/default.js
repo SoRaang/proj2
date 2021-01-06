@@ -4,10 +4,10 @@ $(document).ready(function() { // jQuery Load
     $(window).scroll(function() {
         if ($(window).scrollTop() >= 50) {
             $('header#headIndex').addClass('scrolled');
-            $('aside#copyright_info').addClass('aside_scrolled');
+            $('aside#copyright_info.index').addClass('aside_scrolled');
         } else {
             $('header#headIndex').removeClass('scrolled');
-            $('aside#copyright_info').removeClass('aside_scrolled');
+            $('aside#copyright_info.index').removeClass('aside_scrolled');
         }
     }); // Header Scroll
 
@@ -46,6 +46,7 @@ $(document).ready(function() { // jQuery Load
             $(this).find($('div.mnuDepth2_bg')).stop().slideDown(400);
             $('div.mnuDepth2_banner').appendTo(opensub);
             $('div.mnuDepth2_banner').css({'display': 'flex'});
+            $('div#navIcon > span > div').fadeOut(150);
         }, function() {
             $(this).find($('div.mnuDepth2_bg')).stop().slideUp(200);
             $('div.mnuDepth2_banner').css({'display': 'none'});
@@ -53,11 +54,18 @@ $(document).ready(function() { // jQuery Load
     }); // Submenu Banner Attach
 
     $('div#navIcon > span').each(function() {
+        var n_condition = 1;
+
         $(this).click(function() {
-            $(this).children('div').fadeToggle(250);
-            $(this).siblings().children('div').fadeOut(100);
+            $(this).children('div').show();
+            $(this).siblings().children('div').fadeOut(150);
+            n_condition = 2;
         });
     }); // Nav Icons Sub Window Function
+
+    $('p.q_close').click(function () {
+        $(this).parent('div').fadeOut(150);
+    });
 
     $('ul.dropdown_pane').appendTo('p.dropdown'); // Dropdown Menu Attach
 

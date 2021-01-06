@@ -1,0 +1,66 @@
+/* ---------- CWK Individual Layout CSS Ver. 202101 ---------- */
+
+/* 공통 선언 시작 */
+
+body {
+    background: #e9f4ff;
+}
+
+#wrap { /* 전체 랩핑 */
+    position: relative;
+    width: 100%;
+    min-width: 60rem;
+}
+
+.int_wrap { /* 내부 박스 사이징 */
+    margin: 0 auto;
+    padding: 0 .5rem;
+    width: 60rem; /* 1200px */
+    box-sizing: border-box;
+}
+
+h2.secTitle {
+    position: relative;
+    margin: 0 auto .5rem auto;
+    width: fit-content;
+    font-size: 2.5rem;
+    color: #2d2d2d;
+    line-height: 2.5rem;
+    text-align: center;
+    z-index: 1;
+}
+
+h2.secTitle::before {
+    display: block;
+    position: absolute;
+    bottom: -.15rem;
+    left: calc(0% - .5rem);
+    width: calc(100% + 1rem);
+    height: .5rem;
+    border-radius: .1rem;
+    background: #81abff;
+    z-index: -1;
+    content: '';
+}
+
+p.secSubtitle {
+    margin: 0 auto 2.5rem auto;
+    width: fit-content;
+    font-size: 1rem;
+    color: #2d2d2d;
+    line-height: 1rem;
+    text-align: center;
+}
+
+/* 공통 선언 종료 */
+/* 우선/예외 선언 시작 */
+
+aside#copyright_info {
+    position: relative;
+    background: none;
+}
+
+/* 우선/예외 선언 종료 */
+
+/* ---------- (1) 컨텐츠 영역 시작 ---------- */
+

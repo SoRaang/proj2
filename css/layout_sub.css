@@ -74,7 +74,7 @@ section#subContents {
 
 div.sub_titleimage {
     width: 100%;
-    height: 20rem;
+    height: 15rem;
     background: url('../images/company01.jpeg') no-repeat center;
     background-size: cover;
 }
@@ -84,7 +84,7 @@ p.sub_titletext {
     place-content: center;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(.25rem) brightness(.9);
+    backdrop-filter: blur(.25rem) brightness(.7);
 }
 
 p.sub_titletext > span {
@@ -126,4 +126,53 @@ ul.sub_bread > li.sub_checked::before {
     height: .25rem;
     background: #637dff;
     content: '';
+}
+
+/* ---------- 서브메뉴 내용 시작 ---------- */
+
+div.sub_content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+div.sub_content > img.insert_photo {
+    border-radius: .2rem;
+    width: 22.5rem;
+    height: 15rem;
+    object-fit: cover;
+    box-shadow: 0 1rem 1rem -.5rem rgba(0, 0, 0, .2);
+}
+
+div.sub_content > p {
+    width: 35rem;
+    font-size: .9rem;
+    line-height: 1.5rem;
+}
+
+div.sub_content > p > span {
+    display: block;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+div.sub_content > h4 {
+    margin: auto 0 auto 0;
+    font-size: 1.2rem;
+}
+
+div.sub_content > img:last-of-type {
+    width: 12rem;
+    height: auto;
+    object-fit: contain;
+}
+
+div.sub_content > span {
+    margin: auto auto 0 -5rem;
+    font-size: .7rem;
 }

@@ -942,6 +942,7 @@ form#frmSearch > p.secCategory_selected {
     margin: auto 0 auto .5rem;
     font-size: .8rem;
     line-height: 1rem;
+    cursor: help;
 }
 
 form#frmSearch > p.secCategory_selected::after {

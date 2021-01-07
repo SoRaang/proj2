@@ -152,6 +152,10 @@ div.sub_content > p {
     line-height: 1.5rem;
 }
 
+div.sub_content > p:nth-of-type(2) {
+    text-align: right;
+}
+
 div.sub_content > p > span {
     display: block;
     margin-bottom: 1.5rem;

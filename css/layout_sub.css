@@ -3,7 +3,7 @@
 /* 공통 선언 시작 */
 
 body {
-    background: #e9f4ff;
+    background: #fff;
 }
 
 #wrap { /* 전체 랩핑 */
@@ -68,26 +68,62 @@ aside#mnuQuick {
 
 /* ---------- (1) 서브메뉴 시작 ---------- */
 
-div#wrap > div.int_wrap::after {
-    clear: both;
-    display: block;
-    content: '';
-}
-
-nav#mnuSide {
-    float: left;
-    margin: 1rem 0;
-    padding: .5rem;
-    width: 20%;
-    box-sizing: border-box;
-    background: #fff;
-}
-
 section#subContents {
-    float: right;
-    padding: 2.5rem .5rem;
-    width: 78%;
+
+}
+
+div.sub_titleimage {
+    width: 100%;
+    height: 20rem;
+    background: url('../images/company01.jpeg') no-repeat center;
+    background-size: cover;
+}
+
+p.sub_titletext {
+    display: flex;
+    place-content: center;
+    width: 100%;
     height: 100%;
-    box-sizing: border-box;
-    background: #fff;
+    backdrop-filter: blur(.25rem) brightness(.9);
+}
+
+p.sub_titletext > span {
+    display: block;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 0 .5rem rgba(0, 0, 0, .4);
+}
+
+ul.sub_bread {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 3rem;
+    width: 100%;
+    border-bottom: .05rem solid #ccc;
+    font-size: .9rem;
+    color: #808080;
+    line-height: 1rem;
+}
+
+ul.sub_bread > li {
+    position: relative;
+    margin: 0 1.25rem;
+    padding: .75rem 0;
+    height: 1rem;
+}
+
+ul.sub_bread > li.sub_checked::before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: calc(0% - .25rem);
+    width: calc(100% + .5rem);
+    height: .25rem;
+    background: #637dff;
+    content: '';
 }

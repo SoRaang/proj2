@@ -3,9 +3,9 @@
 $(document).ready(function() { // jQuery Load
     $(window).scroll(function() {
         if ($(window).scrollTop() >= 100) {
-            $('aside#mnuQuick').fadeIn(300);
+            $('aside#mnuQuick.q_main').fadeIn(300);
         } else {
-            $('aside#mnuQuick').fadeOut(100);
+            $('aside#mnuQuick.q_main').fadeOut(100);
         }
     }); // Quick Menu Scroll
 
@@ -50,6 +50,18 @@ $(document).ready(function() { // jQuery Load
             $(this).css({'marginTop': '0'});
         });
     }, 5000); // Line Scrolling Function
+
+    $('ul.secCategory_sel > li').each(function() {
+        $('ul.secCategory_sel > li.cat_selected').click(function() {
+            $(this).siblings('li').show();
+        })
+
+        $(this).click(function () {
+            $(this).siblings('li').removeClass('cat_selected');
+            $(this).preppendTo('ul.secCategory_sel');
+            $(this).addClass('cat_selected');
+        });
+    });
 
     $('section#secCategory article').each(function() {
         $(this).hover(function() {

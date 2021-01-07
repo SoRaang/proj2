@@ -35,12 +35,12 @@ $(document).ready(function() { // jQuery Load
         var opensub = $(this).find('div.int_wrap');
 
         $(this).hover(function() {
-            $(this).find($('div.mnuDepth2_bg')).stop().slideDown(400);
+            $(this).find($('div.mnuDepth2_bg')).stop().fadeIn(400);
             $('div.mnuDepth2_banner').appendTo(opensub);
             $('div.mnuDepth2_banner').css({'display': 'flex'});
             $('div#navIcon > span > div').fadeOut(150);
         }, function() {
-            $(this).find($('div.mnuDepth2_bg')).stop().slideUp(200);
+            $(this).find($('div.mnuDepth2_bg')).stop().fadeOut(200);
             $('div.mnuDepth2_banner').css({'display': 'none'});
         });
     }); // Submenu Banner Attach

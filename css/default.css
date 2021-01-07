@@ -416,35 +416,34 @@ ul#mnuDepth1 > li:last-child:hover > span.txtbold {
     color: #fd4;
 }
 
-ul#mnuDepth1 > li:first-child:hover > div.mnuDepth2_bg {
-    border-top: .25rem solid #81abff;
+ul#mnuDepth1 > li:hover > div.mnuDepth2_bg {
     z-index: 2;
 }
 
-ul#mnuDepth1 > li:nth-child(2):hover > div.mnuDepth2_bg {
+ul#mnuDepth1 > li:first-child > div.mnuDepth2_bg {
     border-top: .25rem solid #81abff;
-    z-index: 2;
 }
 
-ul#mnuDepth1 > li:nth-child(3):hover > div.mnuDepth2_bg {
+ul#mnuDepth1 > li:nth-child(2) > div.mnuDepth2_bg {
+    border-top: .25rem solid #81abff;
+}
+
+ul#mnuDepth1 > li:nth-child(3) > div.mnuDepth2_bg {
     border-top: .25rem solid #8ef35d;
-    z-index: 2;
 }
 
-ul#mnuDepth1 > li:nth-child(4):hover > div.mnuDepth2_bg {
+ul#mnuDepth1 > li:nth-child(4) > div.mnuDepth2_bg {
     border-top: .25rem solid #ffa4a4;
-    z-index: 2;
 }
 
-ul#mnuDepth1 > li:last-child:hover > div.mnuDepth2_bg {
+ul#mnuDepth1 > li:last-child > div.mnuDepth2_bg {
     border-top: .25rem solid #fd4;
-    z-index: 2;
 }
 
 ul#mnuDepth1 > li > span.txtbold::before {
     display: block;
     position: absolute;
-    bottom: calc(-100% - .85rem);
+    bottom: calc(-100% - .5rem);
     left: calc(50% - .75rem);
     width: 1.5rem;
     height: 1.5rem;
@@ -454,7 +453,7 @@ ul#mnuDepth1 > li > span.txtbold::before {
     border-bottom: .75rem solid #fff;
     box-sizing: border-box;
     opacity: 0;
-    transition: .2s;
+    transition: .1s;
     z-index: 3;
     content: '';
 }
@@ -462,6 +461,7 @@ ul#mnuDepth1 > li > span.txtbold::before {
 ul#mnuDepth1 > li:hover > span.txtbold::before {
     bottom: calc(-100% - .1rem);
     opacity: 1;
+    transition: .2s .2s;
 }
 
 div.mnuDepth2_bg {
@@ -751,7 +751,7 @@ footer#footIndex {
     background: #2d2d2d;
     font-size: .6rem;
     line-height: .75rem;
-    color: #808080;
+    color: #bbb;
 }
 
 footer#footIndex a:hover,
@@ -802,7 +802,7 @@ p.dropdown {
     padding: .35rem 2.1rem .35rem .5rem;
     border: .05rem solid #464646;
     border-radius: .1rem;
-    background: #808080;
+    background: #bbb;
     box-shadow: 0 .05rem .1rem rgba(0, 0, 0, .3);
     font-size: .7rem;
     color: #464646;
@@ -832,7 +832,7 @@ p.dropdown.drop::after {
 
 .drop {
     border: .05rem solid #a2a2a2 !important;
-    background: #ccc !important;
+    background: #fff !important;
 }
 
 ul.dropdown_pane {
@@ -843,7 +843,7 @@ ul.dropdown_pane {
     width: 100%;
     border: .05rem solid #a2a2a2;
     border-radius: .1rem;
-    background: #ccc;
+    background: #fff;
     box-shadow: 0 .05rem .1rem rgba(0, 0, 0, .3);
 }
 
@@ -855,8 +855,8 @@ ul.dropdown_pane > li {
 }
 
 ul.dropdown_pane > li:hover {
-    background: #808080;
-    color: #e3e3e3;
+    background: #aaa;
+    color: #fff;
 }
 
 div.footHead > div.int_wrap img {
@@ -892,7 +892,7 @@ ul.footLink > li:first-child {
 }
 
 ul.footLink .txtblack {
-    color: #ccc;
+    color: #fff;
 }
 
 div.footInfo p:first-of-type,

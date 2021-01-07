@@ -937,12 +937,46 @@ form#frmSearch > * {
     outline: none;
 }
 
-form#frmSearch > select {
+form#frmSearch > ul.secCategory_sel {
+    position: relative;
     margin: auto 0 auto .5rem;
+    padding: .5rem 0;
     width: 8rem;
     height: 1rem;
     font-size: .8rem;
     line-height: 1rem;
+    z-index: 5;
+}
+
+form#frmSearch > ul.secCategory_sel > li {
+    display: none;
+    position: relative;
+    left: -1rem;
+    padding: .5rem 0;
+    width: 120%;
+    background: #fff;
+    outline: .05rem solid #ccc;
+    text-indent: 1rem;
+}
+
+form#frmSearch > ul.secCategory_sel > li:hover {
+    background: #aaa;
+    color: #fff;
+}
+
+form#frmSearch > ul.secCategory_sel > li:nth-child(2) {
+    margin-top: 1.5rem;
+}
+
+form#frmSearch > ul.secCategory_sel > li.cat_selected {
+    display: initial;
+    left: 0;
+    outline: none;
+}
+
+form#frmSearch > ul.secCategory_sel > li.cat_selected:hover {
+    background: transparent;
+    color: inherit;
 }
 
 form#frmSearch > hr {
@@ -995,7 +1029,7 @@ section#secCategory article.checked {
     box-shadow: 0 .5rem 2.5rem rgba(162, 187, 214, .4);
     opacity: 1;
     transform: translateY(-.5rem);
-    z-index: 50;
+    z-index: 2;
 }
 
 section#secCategory article > img {

@@ -924,6 +924,7 @@ form#frmSearch {
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-content: center;
+    position: relative;
     margin: 0 auto 2.5rem auto;
     padding: .5rem;
     width: 50rem;
@@ -937,46 +938,34 @@ form#frmSearch > * {
     outline: none;
 }
 
-form#frmSearch > ul.secCategory_sel {
-    position: relative;
+form#frmSearch > p.secCategory_selected {
     margin: auto 0 auto .5rem;
-    padding: .5rem 0;
-    width: 8rem;
-    height: 1rem;
+    font-size: .8rem;
+    line-height: 1rem;
+}
+
+form#frmSearch > p.secCategory_selected::after {
+    content: ' ▾';
+}
+
+form#frmSearch > ul.secCategory_sel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: inherit;
     font-size: .8rem;
     line-height: 1rem;
     z-index: 5;
 }
 
 form#frmSearch > ul.secCategory_sel > li {
-    display: none;
-    position: relative;
-    left: -1rem;
-    padding: .5rem 0;
-    width: 120%;
-    background: #fff;
-    outline: .05rem solid #ccc;
-    text-indent: 1rem;
+    padding: .5rem 1rem;
 }
 
 form#frmSearch > ul.secCategory_sel > li:hover {
     background: #aaa;
     color: #fff;
-}
-
-form#frmSearch > ul.secCategory_sel > li:nth-child(2) {
-    margin-top: 1.5rem;
-}
-
-form#frmSearch > ul.secCategory_sel > li.cat_selected {
-    display: initial;
-    left: 0;
-    outline: none;
-}
-
-form#frmSearch > ul.secCategory_sel > li.cat_selected:hover {
-    background: transparent;
-    color: inherit;
 }
 
 form#frmSearch > hr {
@@ -987,9 +976,9 @@ form#frmSearch > hr {
 }
 
 form#frmSearch > input {
-    margin: auto 0;
+    flex-grow: 1;
+    margin: auto 1rem auto 0;
     padding: .4rem 0;
-    width: 33.5rem;
     height: 1rem;
 }
 

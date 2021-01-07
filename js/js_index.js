@@ -51,17 +51,16 @@ $(document).ready(function() { // jQuery Load
         });
     }, 5000); // Line Scrolling Function
 
-    $('ul.secCategory_sel > li').each(function() {
-        $('ul.secCategory_sel > li.cat_selected').click(function() {
-            $(this).siblings('li').show();
-        })
+    $('p.secCategory_selected').click(function() {
+        $('ul.secCategory_sel').slideToggle();
+    }) // Category Search Option Selector
 
+    $('ul.secCategory_sel > li').each(function() {
         $(this).click(function () {
-            $(this).siblings('li').removeClass('cat_selected');
-            $(this).preppendTo('ul.secCategory_sel');
-            $(this).addClass('cat_selected');
+            $('p.secCategory_selected').text($(this).text());
+            $(this).parent('ul').fadeOut();
         });
-    });
+    }); // Category Search Option Dropdown Function
 
     $('section#secCategory article').each(function() {
         $(this).hover(function() {

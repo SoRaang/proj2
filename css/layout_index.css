@@ -949,6 +949,7 @@ form#frmSearch > p.secCategory_selected::after {
 }
 
 form#frmSearch > ul.secCategory_sel {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;

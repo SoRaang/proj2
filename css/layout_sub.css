@@ -212,6 +212,16 @@ div.scroll_image > img {
     animation: scrolldown 8s infinite;
 }
 
+h4 {
+    margin: auto 0;
+}
+
+div#subInsert > p:last-of-type {
+    margin: auto 0 0 -6rem;
+    font-size: .8rem;
+    color: #808080;
+}
+
 /* ---------- 맨 위로 버튼 시작 ---------- */
 
 aside#gotoTop {

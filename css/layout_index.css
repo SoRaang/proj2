@@ -469,6 +469,10 @@ section#secReview::after {
     background: linear-gradient(-90deg, rgba(233, 244, 255, 1) 5%, rgba(233, 244, 255, 0) 100%);
 }
 
+section#secReview * {
+    outline: none;
+}
+
 section#secReview > div.review_container {
     width: 100%;
     height: 30rem;
@@ -1053,17 +1057,29 @@ section#secCategory article > button {
     bottom: .5rem;
     width: 2.5rem;
     height: 2.5rem;
-    background: #ccc;
     overflow: hidden;
+    transition: .2s;
     cursor: pointer;
+}
+
+section#secCategory article > button:hover {
+    transform: scale(1.2);
+}
+
+section#secCategory article > button:active {
+    transform: scale(.9);
 }
 
 section#secCategory article > button.btn_wish {
     right: 3.5rem;
+    background: url('../images/icon_wish.svg') no-repeat center;
+    background-size: contain;
 }
 
 section#secCategory article > button.btn_shop {
     right: .5rem;
+    background: url('../images/icon_cart.svg') no-repeat center;
+    background-size: contain;
 }
 
 section#secCategory > p.txtblack {

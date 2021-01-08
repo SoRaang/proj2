@@ -126,7 +126,7 @@ ul.sub_bread > li:first-child::before {
     display: block;
     position: absolute;
     top: calc(50% - .5rem);
-    left: -1.1rem;
+    left: -1.2rem;
     width: 1rem;
     height: 1rem;
     background: url('../images/icon_home.svg') no-repeat center;

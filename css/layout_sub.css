@@ -66,11 +66,7 @@ aside#mnuQuick {
 
 /* 우선/예외 선언 종료 */
 
-/* ---------- 서브 빵가루 시작 ---------- */
-
-
-
-/* ---------- 서브 내용 시작 ---------- */
+/* ---------- 서브 레이아웃 시작 ---------- */
 
 section#subContents {
     width: 100%;
@@ -84,6 +80,8 @@ section#subContents > div.int_wrap {
     background: #fff;
     box-shadow: 0 .5rem 2.5rem rgba(162, 187, 214, .4);
 }
+
+/* ---------- 서브 빵가루 시작 ---------- */
 
 ul.sub_bread {
     display: flex;
@@ -141,6 +139,8 @@ ul.sub_bread > li:last-child::after {
 hr.sep_full {
     background: #e3e3e3;
 }
+
+/* ---------- 서브 컨텐츠 시작 ---------- */
 
 h2.sub_title {
     margin: 1.5rem auto;

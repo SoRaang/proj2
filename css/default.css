@@ -95,6 +95,11 @@ hr {
     background: rgba(0, 0, 0, 1);
 }
 
+hr.sep_full {
+    width: 100%;
+    height: .05rem;
+}
+
 address {
     font-style: normal;
 }
